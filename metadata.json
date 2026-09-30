@@ -1,0 +1,6 @@
+{
+  "name": "Weather Intelligence",
+  "description": "Real-time meteorological intelligence, 7-day forecasting, interactive trend analytics, and rule-based planning recommendations powered by the Open-Meteo API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
