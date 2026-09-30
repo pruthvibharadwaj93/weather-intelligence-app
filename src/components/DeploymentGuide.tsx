@@ -106,12 +106,12 @@ export const DeploymentGuide: React.FC<DeploymentGuideProps> = ({
 
               <div className="p-3 flex items-center justify-between gap-2">
                 <div>
-                  <div className="text-xs text-slate-500">SPA Routing Rule (public/_redirects)</div>
+                  <div className="text-xs text-slate-500">SPA Routing (wrangler.jsonc)</div>
                   <div className="text-xs font-mono font-semibold text-slate-900">
-                    /* /index.html 200
+                    not_found_handling: "single-page-application"
                   </div>
                 </div>
-                <span className="text-xs text-emerald-700 font-medium">Included</span>
+                <span className="text-xs text-emerald-700 font-medium">Configured</span>
               </div>
             </div>
           </div>
@@ -311,13 +311,13 @@ npm run build`}
               </tr>
               <tr>
                 <td className="py-2.5 px-4 font-medium text-slate-900">
-                  Page returns 404 after browser refresh
+                  Invalid <code className="font-mono text-slate-900">_redirects</code> infinite loop [code: 100324] or 404 on refresh
                 </td>
                 <td className="py-2.5 px-4">
-                  Single-page application (SPA) routing not configured
+                  Cloudflare Workers/Pages rejects <code className="font-mono text-slate-900">/* /index.html 200</code> in <code className="font-mono text-slate-900">_redirects</code> due to HTML extension stripping
                 </td>
                 <td className="py-2.5 px-4">
-                  Pre-configured in <code className="font-mono text-slate-900">public/_redirects</code> with <code className="font-mono text-slate-900">/* /index.html 200</code>.
+                  Removed <code className="font-mono text-slate-900">_redirects</code> and configured <code className="font-mono text-slate-900">wrangler.jsonc</code> with <code className="font-mono text-slate-900">"not_found_handling": "single-page-application"</code>.
                 </td>
               </tr>
               <tr>

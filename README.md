@@ -18,7 +18,7 @@ A production-ready **Weather Intelligence Application** built in **Google AI Stu
 | `src/components/WeatherCharts.tsx` | Interactive 7-day trend and 24-hour hourly forecast SVG charts |
 | `src/components/RecommendationsPanel.tsx` | Rule-based weather intelligence and operational planning recommendations |
 | `src/components/DeploymentGuide.tsx` | Interactive GitHub-to-Cloudflare Pages deployment guide and validation tracker |
-| `public/_redirects` | Cloudflare Pages SPA routing rule (`/* /index.html 200`) |
+| `wrangler.jsonc` | Cloudflare SPA static assets configuration (`not_found_handling: "single-page-application"`) |
 | `package.json` | Project dependencies and build scripts (`npm run dev`, `npm run build`) |
 | `vite.config.ts` | Vite bundler configuration |
 
